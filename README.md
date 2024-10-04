@@ -1,2 +1,8 @@
-# Weather_Dashboard_App
-#The application will allow users to search for current weather conditions in various cities, utilizing a public weather API. This project will challenge you to build a responsive and interactive user interface, effectively fetch and display data from an external API, and deploy your application for online access.
+# React + Vite
+
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+
+Currently, two official plugins are available:
+
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
