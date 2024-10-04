@@ -1,8 +1,10 @@
-import React from 'react'
+import WeatherApp from "./components/WeatherApp"
 
 const App = () => {
   return (
-    <div className='text-green font-bold'>App</div>
+    <>
+      <WeatherApp />
+    </>
   )
 }
 

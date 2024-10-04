@@ -52,7 +52,7 @@ const WeatherApp = () => {
     search(); // Initial fetch
 
     // Update weather every 5 minutes (300,000 milliseconds)
-    const intervalId = setInterval(search, 3000);
+    const intervalId = setInterval(search, 300000);
 
     // Cleanup interval on component unmount
     return () => clearInterval(intervalId);
@@ -98,7 +98,7 @@ const WeatherApp = () => {
                             />
                             <FaMagnifyingGlass className="icon" onClick={search} />
                         </div>
-                        <button onClick={search} className="bg-blue-500 text-white px-4 py-2 mt-4"> Refresh Weather</button>
+                        <button onClick={search} className="bg-blue-500 text-white px-4 py-2 mt-3 mb-2 items-center"> Refresh</button>
                     </div>
                 </div>
                 {loading ? (<img className="loader" src={loadingGif} alt="loading" />) : data.notFound ? (<div className='not-found'>Not Found</div>) :
