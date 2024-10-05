@@ -1,14 +1,13 @@
 import '../styles/WeatherDisplay.css'
 import { FaMapMarker } from 'react-icons/fa'
-import { FaDroplet } from 'react-icons/fa6'
-import { FaWind } from 'react-icons/fa6'
+import { FaDroplet, FaWind } from 'react-icons/fa6'
 import sunny from '../assets/images/sunny.png';
 import cloudy from '../assets/images/cloudy.png';
 import rainy from '../assets/images/rainy.png';
 import snowy from '../assets/images/snowy.png';
 
 
-const WeatherDisplay = ({data}) => {
+const WeatherDisplay = ({ data }) => {
 
     const weatherImages = {
         Clear: sunny,
@@ -57,4 +56,4 @@ const WeatherDisplay = ({data}) => {
     );
 }
 
-export default WeatherDisplay
+export default WeatherDisplay;

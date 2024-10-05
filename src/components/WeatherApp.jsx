@@ -12,7 +12,7 @@ const WeatherApp = () => {
     const [location, setLocation] = useState('');
     const [loading, setLoading] = useState(false)
 
-    const api_key = import.meta.env.VITE_WEATHER_API_KEY;
+    const api_key= "b83ab96fde76282772af0e0a96efae9e";
 
     useEffect(() => {
         const fetchDefaultWeather = async () => {
@@ -25,7 +25,9 @@ const WeatherApp = () => {
             setLoading(false)
         }
         fetchDefaultWeather();
+
     }, []);
+
 
     const handleInputLocation = (e) => {
         setLocation(e.target.value)
@@ -39,29 +41,16 @@ const WeatherApp = () => {
                 setData({ notFound: true })
             } else {
                 setData(searchData);
-                setLocation('')
+                setLocation('');
 
             }
             setLoading(false)
         }
     }
 
-
-    // useEffect to fetch data initially and set interval for real-time updates
-  useEffect(() => {
-    search(); // Initial fetch
-
-    // Update weather every 5 minutes (300,000 milliseconds)
-    const intervalId = setInterval(search, 300000);
-
-    // Cleanup interval on component unmount
-    return () => clearInterval(intervalId);
-  }, []);
-
-
     const handleKeyDown = (e) => {
         if (e.key === "Enter") {
-            search()
+            search();
         }
     }
 
@@ -77,11 +66,11 @@ const WeatherApp = () => {
 
 
     return (
-        <div className="w-full h-[100vh] bg-fixed flex bg-[#FCF5E5] justify-center items-center overflow-hidden">
+        <div data-test-id= "WeatherApp-container" className="w-full h-[100vh] bg-fixed flex bg-[#FCF5E5] justify-center items-center overflow-hidden">
             <div className="w-[40rem] h-[60rem] m-8 md:m-0 flex flex-col items-center relative p-8 rounded-[3rem] shadow-[-3rem 3rem 6rem rgba(0,0,0,0.1)]" style={{ backgroundImage }} >
                 <div className="header">
                     <div className="name">
-                        <h1>Weather Dashboared </h1>
+                        <h1>Weather Dashboard </h1>
                     </div>
                     <div className="search">
                         <div className="search-top">
@@ -98,7 +87,6 @@ const WeatherApp = () => {
                             />
                             <FaMagnifyingGlass className="icon" onClick={search} />
                         </div>
-                        <button onClick={search} className="bg-blue-500 text-white px-4 py-2 mt-3 mb-2 items-center"> Refresh</button>
                     </div>
                 </div>
                 {loading ? (<img className="loader" src={loadingGif} alt="loading" />) : data.notFound ? (<div className='not-found'>Not Found</div>) :
@@ -112,4 +100,4 @@ const WeatherApp = () => {
     );
 }
 
-export default WeatherApp
+export default WeatherApp;

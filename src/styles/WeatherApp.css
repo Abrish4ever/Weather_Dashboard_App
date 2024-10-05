@@ -1,16 +1,4 @@
-/* .container {
-    width: 100%;
-     background-image: linear-gradient(to right,#f3b07c, #fcd283); 
-    background-image: rgba(150, 185, 215, 0.717);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-} */
-/* .weather img {
-    margin-top: -6rem;
-    width: 80rem;
-} */
+
 .weather-app {
     width: 40rem;
     height: 60rem;
@@ -94,11 +82,4 @@
     margin-top: 5rem;
     text-shadow: -0.3rem 0.3rem 1rem rgba(0, 0, 0, 0.2);
 }
-/* .weather-type {
-    position: absolute;
-    top: 45%;
-    left: 50%;
-    transform: translateX(-50%);
-    font-size: 2.5rem;
-    color: #484569;
-} */
+
